@@ -38,7 +38,7 @@ body {
     .light-blue-section {
       display: flex;
       align-items: center;
-      background-color: $desaturatedBlue;
+      background-color: $blue;
       border-radius: 1rem;
       height: 130px;
 
@@ -90,6 +90,7 @@ body {
 .right-side p {
   font-size: 0.8rem;
   margin-bottom: 3px;
+  color: $paleBlue;
 }
 
 .right-side h2 {
@@ -102,6 +103,10 @@ body {
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
+
+  p {
+    color: $paleBlue;
+  }
 }
 
 .boxes-container {
@@ -207,4 +212,82 @@ body {
     margin-bottom: 0;
   }
 
+  // Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1440px) {
   
+  .container {
+    flex-direction: row;
+    height: 100vh;
+    border: 1px red solid;
+  }
+  .profile-container {
+    width: 250px;
+    height: 530px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+
+    .light-blue-section {
+      flex-direction: column;
+      height: 360px;
+
+      .left-side img {
+        margin: 0px;
+        width: 85px;
+        height: 85px;
+        margin: 30px;
+        margin-left: -80px;
+      }
+
+      .right-side {
+        margin-left: 60px;
+
+        p {
+          font-size: 15px;
+        }
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+
+    .dark-blue-section {
+      flex-direction: column;
+      margin-left: 35px;
+      height: 150px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .lower {
+    flex-direction: column;
+  }
+
+  .boxes-container {
+    width: 850px;
+    .box-container {
+      width: 250px;
+      height: 250px;
+      margin: 15px;
+    }
+    .inner-box {
+      top: 3.2rem;
+      padding-left: 10px;
+      .upper {
+        margin-bottom: 15px;
+      }
+      h1 {
+        margin-bottom: 5px;
+      }
+    }
+    
+    
+    .current {
+      font-size: 60px;
+    }
+  }
+  
+ }
