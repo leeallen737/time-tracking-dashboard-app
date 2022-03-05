@@ -19,23 +19,45 @@ function App() {
   const svg = [work, play, study, exercise, social, selfCare]
   
   const [currentTimeFrame, selectTimeframe] = useState('weekly');
-
+  const [dailyTextColor, dailyTextColorUpdate] = useState('');
+  const [weeklyTextColor, weeklyTextColorUpdate] = useState('white');
+  const [monthlyTextColor, monthlyTextColorUpdate] = useState('');
+  const [previousText, previousTextUpdate] = useState('Last Week - ')
+console.log(previousText)
   //functions for profile component
-  const dailyClick = () => selectTimeframe('daily')
-  const weeklyClick = () => selectTimeframe('weekly')
-  const monthlyClick = () => selectTimeframe('monthly')
+  const dailyClick = () => {
+    selectTimeframe('daily')
+    dailyTextColorUpdate('white')
+    weeklyTextColorUpdate('')
+    monthlyTextColorUpdate('')
+    previousTextUpdate('Yesterday - ')
+  }
+  const weeklyClick = () => {
+    selectTimeframe('weekly')
+    weeklyTextColorUpdate('white')
+    dailyTextColorUpdate('')
+    monthlyTextColorUpdate('')
+    previousTextUpdate('Last Week - ')
+  }
+  const monthlyClick = () => {
+    selectTimeframe('monthly')
+    monthlyTextColorUpdate('white')
+    dailyTextColorUpdate('')
+    weeklyTextColorUpdate('')
+    previousTextUpdate('Last Month - ')
+  }
 
   return (
   
     <div className="container">
-        <Profile dailyStats={dailyClick} weeklyStats={weeklyClick} monthlyStats={monthlyClick}/>
+        <Profile dailyStats={dailyClick} weeklyStats={weeklyClick} monthlyStats={monthlyClick} dailyWhiteText={dailyTextColor} weeklyWhiteText={weeklyTextColor} monthlyWhiteText={monthlyTextColor}/>
         <div className="boxes-container">
           
         {
           data.map((timer, index) => {
           
           
-          return <TimerBox key={timer} title={timer.title} color={colors[index]} imagesrc={svg[index]} current={timer.timeframes[currentTimeFrame].current} previous={timer.timeframes[currentTimeFrame].previous}/>
+          return <TimerBox key={timer} title={timer.title} color={colors[index]} imagesrc={svg[index]} current={timer.timeframes[currentTimeFrame].current} previous={timer.timeframes[currentTimeFrame].previous} previousText={previousText}/>
          
           })
         }

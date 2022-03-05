@@ -1,8 +1,9 @@
 
 
-export const TimerBox = ({ title, current, previous, color, imagesrc }) => {
+export const TimerBox = ({ title, current, previous, color, imagesrc, previousText }) => {
   
   
+  console.log(previousText)
   return (
     <div className="box-container">
             <div className={`box ${color}`}>
@@ -15,7 +16,7 @@ export const TimerBox = ({ title, current, previous, color, imagesrc }) => {
               <div className="lower">
                 <h1 className="current">{current}hrs</h1>
                 <span>
-                <p className="previous">{previous}hrs</p>
+                <p className="previous">{previousText}{previous}hrs</p>
                 </span>
               </div>
             </div>

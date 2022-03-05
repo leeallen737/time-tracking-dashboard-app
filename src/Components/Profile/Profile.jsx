@@ -1,6 +1,6 @@
 import pic from '../../images/image-jeremy.png';
 
-export const Profile = ({dailyStats, weeklyStats, monthlyStats}) => {
+export const Profile = ({dailyStats, weeklyStats, monthlyStats, dailyWhiteText, weeklyWhiteText, monthlyWhiteText}) => {
   return (
     <div className="profile-container">
           <div className="light-blue-section">
@@ -8,14 +8,16 @@ export const Profile = ({dailyStats, weeklyStats, monthlyStats}) => {
           <img src={pic} alt="picture of Jeremy Robson"/>
           </div>
           <div className="right-side">
-            <p>Report for</p>
-            <h2>Jeremy Robson</h2>
+            <p>Front-End</p>
+            <p>React Developer</p>
+            <h2>Lee J Allen</h2>
+            
           </div>
           </div>
           <div className="dark-blue-section">
-            <p  onClick={dailyStats} className={`daily`}>Daily</p>
-            <p  onClick={weeklyStats} className={`weekly`}>Weekly</p>
-            <p onClick={monthlyStats} className={`monthly`}>Monthly</p>
+            <p onClick={dailyStats} className={`daily ${dailyWhiteText}`}>Daily</p>
+            <p onClick={weeklyStats} className={`weekly ${weeklyWhiteText}`}>Weekly</p>
+            <p onClick={monthlyStats} className={`monthly ${monthlyWhiteText}`}>Monthly</p>
           </div>
     </div>
   )

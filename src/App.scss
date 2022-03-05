@@ -8,9 +8,6 @@
   color: #fff;
 }
 
-.white {
-  color: #fff;
-}
 body {
     display: flex;
     justify-content: center;
@@ -220,7 +217,7 @@ body {
   }
 
   // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   
   .container {
     flex-direction: row;
@@ -247,11 +244,13 @@ body {
 
       .right-side {
         margin-left: 60px;
-
+        
         p {
           font-size: 15px;
         }
+        
         h2 {
+          margin-top: 10px;
           font-size: 40px;
         }
       }
@@ -264,6 +263,9 @@ body {
 
       p {
         font-size: 18px;
+        &.white {
+          color: #fff;
+        }
       }
     }
   }
@@ -282,6 +284,10 @@ body {
     .inner-box {
       top: 3.2rem;
       padding-left: 10px;
+      &:hover {
+        background-color: hsl(236, 27%, 33%);
+        transition: 1s;
+      }
       .upper {
         margin-bottom: 15px;
       }
