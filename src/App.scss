@@ -8,7 +8,9 @@
   color: #fff;
 }
 
-
+.white {
+  color: #fff;
+}
 body {
     display: flex;
     justify-content: center;
@@ -106,6 +108,11 @@ body {
 
   p {
     color: $paleBlue;
+    cursor: pointer;
+    &:hover {
+      color:#fff;
+      transition: 1s;
+    }
   }
 }
 
@@ -156,7 +163,7 @@ body {
         background-color: $softOrangeSelfCare;
       }
 
-      &>svg {
+      &>img {
         position: absolute;
         top: -5px;
         right: 15px;
@@ -213,12 +220,11 @@ body {
   }
 
   // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   
   .container {
     flex-direction: row;
     height: 100vh;
-    border: 1px red solid;
   }
   .profile-container {
     width: 250px;
