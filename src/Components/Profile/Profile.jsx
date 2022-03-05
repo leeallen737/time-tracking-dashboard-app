@@ -15,9 +15,9 @@ export const Profile = ({dailyStats, weeklyStats, monthlyStats, dailyWhiteText, 
           </div>
           </div>
           <div className="dark-blue-section">
-            <p onClick={dailyStats} className={`daily ${dailyWhiteText}`}>Daily</p>
-            <p onClick={weeklyStats} className={`weekly ${weeklyWhiteText}`}>Weekly</p>
-            <p onClick={monthlyStats} className={`monthly ${monthlyWhiteText}`}>Monthly</p>
+            <button onClick={dailyStats} className={`daily ${dailyWhiteText}`}>Daily</button>
+            <button onClick={weeklyStats} className={`weekly ${weeklyWhiteText}`}>Weekly</button>
+            <button onClick={monthlyStats} className={`monthly ${monthlyWhiteText}`}>Monthly</button>
           </div>
     </div>
   )
