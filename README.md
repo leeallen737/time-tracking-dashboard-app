@@ -1,5 +1,5 @@
 You can find a live example here.
-https://leeallen737.github.io/time-tracking-dashboard-app/
+https://dazzling-galileo-d5f7b3.netlify.app/
 
 # Front-end Style Guide
 
